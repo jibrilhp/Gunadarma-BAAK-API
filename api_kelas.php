@@ -10,7 +10,7 @@ else:
 $kelas ="2ka01";
 endif;
 $kelas = strtoupper($kelas);
-if (substr($kelas,0,1) === "3") goto tingkat3;
+
 
 $ssd = "cari=".$kelas."&bywhat=kelas&search_button.x=0&search_button.y=0&substep=search";
 
