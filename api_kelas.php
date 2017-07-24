@@ -19,6 +19,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,"http://baak.gunadarma.ac.id/index.php?stateid=jadkul");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS,$ssd);
+curl_setopt($ch, CURLOPT_USERAGENT,"PungBearBot: pungbear.blogspot.co.id");
 
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -60,9 +61,7 @@ foreach ($arg1 as $p) {
     switch ($nomor) {
         case 1: array_push($kelas,$p);
         break;
-        
         case 2: array_push($hari, $p);
-        //echo $p . "\n";
         break;
         case 3: array_push($matkul, $p);
         break;
@@ -84,12 +83,5 @@ $response["data"]   = array();
 $response["pungbear"] = "v.1.0";
 array_push($response["data"],$kelas,$hari,$matkul,$waktu,$ruang,$dosen);
 echo json_encode($response);
-goto selesai;
 
-
-tingkat3:
-
-
-
-selesai:
 ?>
